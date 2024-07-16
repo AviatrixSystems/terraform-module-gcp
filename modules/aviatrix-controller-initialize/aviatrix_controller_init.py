@@ -181,7 +181,7 @@ def function_handler(event):
 
 def wait_until_controller_api_server_is_ready(
         hostname="123.123.123.123",
-        api_version="v1",
+        api_version="v2",
         api_route="api",
         total_wait_time=300,
         interval_wait_time=10,
@@ -307,7 +307,7 @@ def wait_until_controller_api_server_is_ready(
 
 
 def login(
-        api_endpoint_url="https://123.123.123.123/v1/api",
+        api_endpoint_url="https://123.123.123.123/v2/api",
         username="admin",
         password="********",
         hide_password=True,
@@ -341,7 +341,7 @@ def login(
 
 
 def send_aviatrix_api(
-        api_endpoint_url="https://123.123.123.123/v1/api",
+        api_endpoint_url="https://123.123.123.123/v2/api",
         request_method="POST",
         payload=dict(),
         files=None,
@@ -452,7 +452,7 @@ def verify_aviatrix_api_response_login(response=None):
 
 
 def has_controller_initialized(
-        api_endpoint_url="123.123.123.123/v1/api",
+        api_endpoint_url="123.123.123.123/v2/api",
         CID="ABCD1234",
 ):
     request_method = "GET"
@@ -480,7 +480,7 @@ def has_controller_initialized(
 
 
 def set_admin_email(
-        api_endpoint_url="123.123.123.123/v1/api",
+        api_endpoint_url="123.123.123.123/v2/api",
         CID="ABCD1234",
         admin_email="avx@aviatrix.com",
 ):
@@ -531,7 +531,7 @@ def verify_aviatrix_api_set_admin_email(response=None):
 
 
 def set_admin_password(
-        api_endpoint_url="123.123.123.123/v1/api",
+        api_endpoint_url="123.123.123.123/v2/api",
         CID="ABCD1234",
         old_admin_password="********",
         new_admin_password="********",
@@ -631,7 +631,7 @@ def verify_aviatrix_api_set_admin_password(response=None):
 
 
 def run_initial_setup(
-        api_endpoint_url="123.123.123.123/v1/api",
+        api_endpoint_url="123.123.123.123/v2/api",
         CID="ABCD1234",
         target_version="latest",
 ):
@@ -713,7 +713,7 @@ def verify_aviatrix_api_run_initial_setup(response=None):
 
 
 def set_aviatrix_customer_id(
-        api_endpoint_url="https://123.123.123.123/v1/api",
+        api_endpoint_url="https://123.123.123.123/v2/api",
         CID="ABCD1234",
         customer_id="aviatrix-1234567.89",
 ):
@@ -736,7 +736,7 @@ def set_aviatrix_customer_id(
 
 
 def create_access_account(
-        api_endpoint_url="123.123.123.123/v1/api",
+        api_endpoint_url="123.123.123.123/v2/api",
         CID="ABCD1234",
         account_name="avx_access_account",
         cloud_type="4",
@@ -839,7 +839,7 @@ if __name__ == "__main__":
     event = {
         "hostname": args.public_ip,
         "ucc_private_ip": args.private_ip,
-        "aviatrix_api_version": "v1",
+        "aviatrix_api_version": "v2",
         "aviatrix_api_route": "api",
         "admin_email": args.admin_email,
         "new_admin_password": args.admin_password,
